@@ -1,0 +1,7 @@
+const myString = "xabcxdefxghi";
+
+function solution(myString) {
+  return myString.split("x").map((char) => char.length);
+}
+
+console.log(solution(myString));
