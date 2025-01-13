@@ -21,7 +21,6 @@
 
 // ans.forEach((line) => console.log(line));
 
-
 const input = require("fs")
   .readFileSync("/dev/stdin")
   .toString()
@@ -30,11 +29,12 @@ const input = require("fs")
 
 const T = Number(input[0]);
 
-const results = input.slice(1, T + 1).map(line => {
+const results = input.slice(1, T + 1).map((line) => {
   const [count, word] = line.split(" ");
-  return Array.from(word).reduce((acc, char) => 
-    acc + char.repeat(Number(count)), 
-  "");
+  return Array.from(word).reduce(
+    (acc, char) => acc + char.repeat(Number(count)),
+    ""
+  );
 });
 
 console.log(results.join("\n"));
